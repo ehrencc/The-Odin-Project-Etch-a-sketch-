@@ -1,0 +1,43 @@
+/*Body CSS */
+body{
+    margin: 0;
+    padding: 0;
+}
+/*Header CSS */
+.container {
+    display: flex;
+    
+
+}
+.logo {
+    flex: 1;
+    text-align: center;
+}
+/*Controls CSS */
+.container.controls{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    
+}
+button{
+    flex: 1;
+    max-width: 10%;
+    margin-right: 0.5%;
+}
+/* Cell CSS */
+#grid{
+  width: 480px; /* set the width of the wrapper to match the width of the grid */
+  border: 1px solid #ccc; /* add a 1px gray border around the wrapper */
+  display: flex; /* use Flexbox to center the grid within the wrapper */
+  justify-content: center;
+  align-items: center;
+}
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    display: inline-block;
+}
