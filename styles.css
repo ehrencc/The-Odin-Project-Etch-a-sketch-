@@ -29,15 +29,20 @@ button{
 }
 /* Cell CSS */
 #grid{
-  width: 480px; /* set the width of the wrapper to match the width of the grid */
-  border: 1px solid #ccc; /* add a 1px gray border around the wrapper */
+  width: 540px; /* set the width of the wrapper to match the width of the grid */
   display: flex; /* use Flexbox to center the grid within the wrapper */
   justify-content: center;
   align-items: center;
+  padding-left: 35%;
+  padding-top: 5%
 }
 .cell {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    width: 2rem;
+    height: 2rem;
+    border: none;
     display: inline-block;
+    background-color: whitesmoke;
+    outline: 2px solid purple;
 }
