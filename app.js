@@ -35,25 +35,28 @@ const sliderValue = document.getElementById('size-value');
 const sliderInput = document.getElementById('sliderGrid');
 //slider function to change grid 
 sliderInput. oninput = function() {
-  //for loop to generate a 16x16 grid within the div
-for (let i=0; i<sliderInput.value; i++){
-  for (let j=0; j<sliderInput.value; j++){
-      //variable containing clear button
-      const clearBtn = document.getElementById('clearBtn');       
-      const cellBox = document.createElement('div');
-      cellBox.classList.add('cell');
-      grid.appendChild(cellBox);
-      //add event listener to each cell
-      cellBox.addEventListener('click', function() {
-          cellShaded(cellBox);
-        });
+    //change slider value text
+    const currentVal = sliderInput.value
+    sliderValue.innerText = currentVal.toString() + "x" + currentVal.toString();
+    //clear current grid
+    grid.innerHTML='';
+    //for loop to generate a 16x16 grid within the div
+    for (let i=0; i<sliderInput.value; i++){
+      for (let j=0; j<sliderInput.value; j++){
+        //variable containing clear button
+        const clearBtn = document.getElementById('clearBtn');       
+        const cellBox = document.createElement('div');
+        cellBox.classList.add('cell');
+        grid.appendChild(cellBox);
+        //add event listener to each cell
+        cellBox.addEventListener('click', function() {
+           cellShaded(cellBox);
+          });
         //event listener for eraser button
-      clearBtn.addEventListener('click', function() {
-          cellShadedDef(cellBox);
+       clearBtn.addEventListener('click', function() {
+           cellShadedDef(cellBox);
         });
-  }
-}
-  //change slider value text
-  const currentVal = sliderInput.value
-  sliderValue.innerText = currentVal.toString() + "x" + currentVal.toString();
+      }
+    }
+
 }
